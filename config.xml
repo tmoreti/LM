@@ -23,6 +23,7 @@
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#000000" />
     <preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="android-minSdkVersion" value="15" />
     <platform name="android">
         <allow-intent href="market:*" />
         <plugin name="cordova-plugin-geolocation" value="org.apache.cordova.GeoBroker" />
