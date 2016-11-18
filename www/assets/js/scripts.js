@@ -139,7 +139,8 @@ function mapaBanda(id){
 
 // ----------------------- LOGIN FACEBOOK ----------------------------//
 function loginFace(){
-	facebookConnectPlugin.login(["public_profile", "user_birthday"],function(){
+	alert('teste');
+	facebookConnectPlugin.login(["public_profile", "email"],function(response){
 		alert('sucesso');
 	},function(){
 		alert('erro');
