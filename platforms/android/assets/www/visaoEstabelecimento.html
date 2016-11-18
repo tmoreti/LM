@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+        
+        <title>Live Music</title>
+        <script src="assets/js/jquery-2.2.0.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
+        <script src="assets/js/jquery-mask.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+        <script src="assets/js/wow.js"></script>
+        <link href="assets/css/simple-sidebar.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="assets/css/efeitoImg.css">
+        <script src="assets/js/iscroll.js"></script>
+        <link rel="stylesheet" type="text/css" href="assets/css/estilos.css">
+        
+        <script src="assets/js/scripts.js"></script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <script src="assets/js/gmaps.js"></script>
+        
+
+    </head>
+    <script type="text/javascript">
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        function onDeviceReady() {
+            inicioIndex();
+        }
+    </script>
+    <body style="background-color:#610d11;">
+
+
+            <div id="sidebar"> 
+                
+            </div>
+
+            <div class="container-fluid">
+                <div class="row hd">
+                    
+                </div>
+            </div>
+
+                <div class="container-fluid">
+                    <div class="corpo">
+                        <div class="row">
+                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <h2>Destaque</h2>
+                            </div>
+                        </div>
+                        <div class="row" id="divDestaque"></div>
+
+                        <div class="row">
+                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <h2>Mais Contratados</h2>
+                            </div>
+                        </div>
+
+                        <div class="listaBandas">
+                            <div class="fotoNome">
+                                <div class="divFoto">
+                                    <img src="imagens/banda.jpg" class="ftBanda">
+                                </div>
+                                <p> Banda</p>
+                                <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></p>
+                            </div>
+                            <div class="fotoNome">
+                                <div class="divFoto">
+                                    <img src="imagens/banda1.jpg" class="ftBanda">
+                                </div>
+                                <p> Banda 1</p>
+                                <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></p>
+                            </div>
+                            <div class="fotoNome">
+                                <div class="divFoto">
+                                    <img src="imagens/banda2.jpg" class="ftBanda">
+                                </div>
+                                <p> Banda 2 </p>
+                                <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span></p>
+                            </div>
+                            <div class="fotoNome">
+                                <div class="divFoto">
+                                    <img src="imagens/banda3.jpg" class="ftBanda">
+                                </div>
+                                <p> Banda 3</p>
+                                <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span></p>
+                            </div>
+                            <div class="fotoNome">
+                                <div class="divFoto">
+                                    <img src="imagens/banda4.jpg" class="ftBanda">
+                                </div>
+                                <p> Banda 4</p>
+                                <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></p>
+                            </div>
+                            <div class="fotoNome">
+                                <div class="divFoto">
+                                    <img src="imagens/banda5.jpg" class="ftBanda">
+                                </div>
+                                <p> Banda 5</p>
+                                <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></p>
+                            </div>
+                            <div class="fotoNome">
+                                <div class="divFoto">
+                                    <img src="imagens/banda6.jpg" class="ftBanda">
+                                </div>
+                                <p> Banda 6</p>
+                                <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></p>
+                            </div>
+                            <div class="fotoNome">
+                                <div class="divFoto">
+                                    <img src="imagens/banda7.jpg" class="ftBanda">
+                                </div>
+                                <p> Banda 7</p>
+                                <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></p>
+                            </div>
+                            <div class="fotoNome">
+                                <div class="divFoto">
+                                    <img src="imagens/banda8.jpg" class="ftBanda">
+                                </div>
+                                <p> Banda 8</p>
+                                <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></p>
+                            </div>
+                            <div class="fotoNome">
+                                <div class="divFoto">
+                                    <img src="imagens/banda9.jpg" class="ftBanda">
+                                </div>
+                                <p> Banda 9</p>
+                                <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></p>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <h2>Categorias</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                                <button type="button" class="btn btn-md botaoCategoria">Rock</button> <button type="button" class="btn btn-md botaoCategoria">Sertanejo</button> <button type="button" class="btn btn-md botaoCategoria">Samba</button> <button type="button" class="btn btn-md botaoCategoria">Pagode</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="banda">
+                    <div class="row">
+                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+
+ 
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+
+            pageTransition({
+                effectClasses: [ 'slide' ],
+                effectClassesReverse: [ 'slide', 'reverse' ],
+                afterSlideFunction: function() {
+                    /* Placeholder for a callback to get executed after each page transition. */
+                },
+                ajaxLoader: 'ajax-loader',
+                noSlideAttr: 'data-no-slide',
+                contentContainerSelector: 'body',
+                cssSlideDuration: 705,
+                headElementsToReplace: 'meta, link, title'
+            });
+            app.initialize();
+        </script>
+    </body>
+</html>

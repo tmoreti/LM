@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="br.com.livemusic.livemusic" version="0.0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Live Music</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <plugin name="cordova-plugin-whitelist" version="1" />
+    <plugin name="org.apache.cordova.splashscreen" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <icon src="icon.png" />
+    <plugin name="cordova-plugin-dialogs" />
+    <plugin name="cordova-plugin-statusbar" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#000000" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <plugin name="cordova-plugin-geolocation" value="org.apache.cordova.GeoBroker" />
+        <splash qualifier="ldpi" src="www/res/screen/android/screen-ldpi-portrait.png" />
+        <splash qualifier="mdpi" src="www/res/screen/android/screen-mdpi-portrait.png" />
+        <splash qualifier="hdpi" src="www/res/screen/android/screen-hdpi-portrait.png" />
+        <splash qualifier="xhdpi" src="www/res/screen/android/screen-xhdpi-portrait.png" />
+        <icon qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
+        <icon qualifier="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />
+        <icon qualifier="hdpi" src="www/res/icon/android/icon-72-hdpi.png" />
+        <icon qualifier="xhdpi" src="www/res/icon/android/icon-96-xhdpi.png" />
+        <plugin name="cordova-plugin-network-information" value="org.apache.cordova.NetworkManager" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <feature name="Geolocation">
+            <param name="ios-package" value="CDVLocation" />
+        </feature>
+        <plugin name="cordova-plugin-geolocation" value="CDVLocation" />
+        <splash height="480" src="www/res/screen/ios/screen-iphone-portrait.png" width="320" />
+        <splash height="960" src="www/res/screen/ios/screen-iphone-portrait-2x.png" width="640" />
+        <splash height="1136" src="www/res/screen/ios/screen-iphone-portrait-568h-2x.png" width="640" />
+        <splash height="1024" src="www/res/screen/ios/screen-ipad-portrait.png" width="768" />
+        <splash height="768" src="www/res/screen/ios/screen-ipad-landscape.png" width="1024" />
+        <icon height="57" src="www/res/icon/ios/icon-57.png" width="57" />
+        <icon height="72" src="www/res/icon/ios/icon-72.png" width="72" />
+        <icon height="114" src="www/res/icon/ios/icon-57-2x.png" width="114" />
+        <icon height="144" src="www/res/icon/ios/icon-72-2x.png" width="144" />
+        <plugin name="cordova-plugin-network-information" value="CDVConnection" />
+    </platform>
+    <plugin name="cordova-plugin-facebook4" spec="~1.7.4">
+        <variable name="APP_ID" value="207294053050026" />
+        <variable name="APP_NAME" value="Live Music" />
+    </plugin>
+</widget>
