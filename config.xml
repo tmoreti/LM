@@ -20,6 +20,7 @@
     <icon src="icon.png" />
     <plugin name="cordova-plugin-dialogs" />
     <plugin name="cordova-plugin-statusbar" />
+    <preference name="Orientation" value="landscape" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#000000" />
     <preference name="StatusBarStyle" value="lightcontent" />
