@@ -1,12 +1,18 @@
 var segmento='';
 var base;
 $( document ).ready(function() {
-  new WOW().init();
-  navigator.splashscreen.show();
-  	//pageTransition();
-  //StatusBar.backgroundColorByName("red");
+	new WOW().init();
+	navigator.splashscreen.show();
+	verificarLogin();
 
 });
+function verificarLogin(){
+	facebookConnectPlugin.getLoginStatus(function(response){
+		alert('success:' + response.status)
+	}, function(response){
+		alert('error: ' + response.status);
+	})
+}
 function inicioIndex(){
 	base=JSON.parse(localStorage.getItem("base"));
 	
@@ -316,6 +322,15 @@ function abrirLinkExterno(link){
     else if (device.platform.toUpperCase() == 'IOS') {
        	window.open('http://' + link.replace('http://',''), '_system');
     }
+}
+
+function irparaLoad(url){
+	toggle_sidebar();
+	$('.corpo').fadeOut(500,function(){
+		$('.corpo').load(url,function(){
+			$('.corpo').fadeIn(500);
+		});
+	});
 }
 
 function detalhesBanda(id){

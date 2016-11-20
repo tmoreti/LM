@@ -165,10 +165,18 @@ h3{
 	text-shadow: 1px 1px 1px #888;
 	font-size: 2em;
 }
+.footer{
+	padding: 10px;
+}
 .nomeInfoBanda{
 	font-size: 150%;
 	font-family: lato-Bold;
 	color: #fff;
+}
+.fonte{
+	font-size: 12px;
+	color:#fff;
+	font-family: lato-regular;
 }
 #map{
 	height: 250px;
