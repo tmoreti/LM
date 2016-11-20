@@ -146,10 +146,25 @@ function loginFace(){
 	})
 }
 function verificarLogin(){
-	alert('teste link');
-	facebookConnectPlugin.getLoginStatus(function(response){
-		alert(response.status);
-	});
+	facebookConnectPlugin.getLoginStatus(
+		function(response){
+			if(response.status=='connected'){
+				alert('connected')
+				facebookConnectPlugin.api('/me?fields=id,name,email', null,
+					 function(response) {
+						 window.localStorage["nome"]=response.name;
+						 window.localStorage["id"]=response.id;
+						 window.localStorage["email"]=response.email;
+						 window.localStorage["logado"]='1';
+						 window.localStorage["modo_login"]='facebook';
+						 document.location='logado.html';
+					 }
+				);
+			}else{
+				alert('disconectado')
+			}
+		}
+	);
 }
 
 // ----------------------- VISAO ESTABELECIMENTO ----------------------------//
