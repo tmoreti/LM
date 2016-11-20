@@ -3,16 +3,10 @@ var base;
 $( document ).ready(function() {
 	new WOW().init();
 	navigator.splashscreen.show();
-	verificarLogin();
+	
 
 });
-function verificarLogin(){
-	facebookConnectPlugin.getLoginStatus(function(response){
-		alert('success:' + response.status)
-	}, function(response){
-		alert('error: ' + response.status);
-	})
-}
+
 function inicioIndex(){
 	base=JSON.parse(localStorage.getItem("base"));
 	
@@ -145,12 +139,17 @@ function mapaBanda(id){
 
 // ----------------------- LOGIN FACEBOOK ----------------------------//
 function loginFace(){
-	alert('teste');
-	facebookConnectPlugin.login(["public_profile", "email"],function(response){
+	facebookConnectPlugin.login(["public_profile", "user_birthday"],function(){
 		alert('sucesso');
 	},function(){
 		alert('erro');
 	})
+}
+function verificarLogin(){
+	alert('teste link');
+	facebookConnectPlugin.getLoginStatus(function(response){
+		alert('success:' + response.status);
+	});
 }
 
 // ----------------------- VISAO ESTABELECIMENTO ----------------------------//

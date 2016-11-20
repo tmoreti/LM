@@ -3,16 +3,10 @@ var base;
 $( document ).ready(function() {
 	new WOW().init();
 	navigator.splashscreen.show();
-	verificarLogin();
+	
 
 });
-function verificarLogin(){
-	facebookConnectPlugin.getLoginStatus(function(response){
-		alert('success:' + response.status)
-	}, function(response){
-		alert('error: ' + response.status);
-	})
-}
+
 function inicioIndex(){
 	base=JSON.parse(localStorage.getItem("base"));
 	
@@ -150,6 +144,12 @@ function loginFace(){
 	},function(){
 		alert('erro');
 	})
+}
+function verificarLogin(){
+	alert('teste link');
+	facebookConnectPlugin.getLoginStatus(function(response){
+		alert('success:' + response.status);
+	});
 }
 
 // ----------------------- VISAO ESTABELECIMENTO ----------------------------//
