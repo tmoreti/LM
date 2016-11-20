@@ -147,15 +147,19 @@ function logoffFace(){
 	});
 }
 function loginFace(){
-	facebookConnectPlugin.login(["public_profile", "user_birthday", "email"],function(){
-		document.location="index.html";
-	})
+	toggle_sidebar();
+	$('.corpo').fadeOut(500,function(){
+		facebookConnectPlugin.login(["public_profile", "user_birthday", "email"],function(){
+			document.location="index.html";
+		})
+	});
 }
 function verificarLogin(){
 	facebookConnectPlugin.getLoginStatus(
 		function(response){
 			if(response.status=='connected'){
 				// logado
+				alert('conectado');
 				facebookConnectPlugin.api('/me?fields=id,name,email', null,
 					 function(response) {
 						 window.localStorage["nome"]=response.name;
@@ -166,12 +170,13 @@ function verificarLogin(){
 					 }
 				);
 
-				$('#mnLogin').css('display','none');
-				$('#nmLogoff').css('display','');
+				$('#mnLogin').hide();
+				$('#nmLogoff').show();
 			}else{
 				// deslogado 
-				$('#mnLogin').css('display','');
-				$('#nmLogoff').css('display','none');
+				alert('desconectado');
+				$('#mnLogin').show();
+				$('#mnLogoff').hide();
 			}
 		}
 	);
