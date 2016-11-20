@@ -6,11 +6,7 @@ $( document ).ready(function() {
 	
 
 });
-function verificarLogin(){
-	facebookConnectPlugin.getLoginStatus(function(response){
-		alert('success:' + response.status);
-	});
-}
+
 function inicioIndex(){
 	base=JSON.parse(localStorage.getItem("base"));
 	
@@ -148,6 +144,12 @@ function loginFace(){
 	},function(){
 		alert('erro');
 	})
+}
+function verificarLogin(){
+	alert('teste link');
+	facebookConnectPlugin.getLoginStatus(function(response){
+		alert('success:' + response.status);
+	});
 }
 
 // ----------------------- VISAO ESTABELECIMENTO ----------------------------//
