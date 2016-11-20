@@ -148,7 +148,7 @@ function loginFace(){
 function verificarLogin(){
 	alert('teste link');
 	facebookConnectPlugin.getLoginStatus(function(response){
-		alert('success:' + response.status);
+		alert(response.status);
 	});
 }
 
