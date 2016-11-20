@@ -161,7 +161,7 @@ function verificarLogin(){
 					 }
 				);
 			}else{
-				alert('disconectado')
+				alert('desconectado')
 			}
 		}
 	);
