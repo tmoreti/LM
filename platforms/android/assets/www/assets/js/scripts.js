@@ -3,12 +3,12 @@ var base;
 $( document ).ready(function() {
 	new WOW().init();
 	navigator.splashscreen.show();
-	verificarLogin();
+	
 
 });
 function verificarLogin(){
 	facebookConnectPlugin.getLoginStatus(function(response){
-		alert('success:' + response.status)
+		alert('success:' + response.status);
 	}, function(response){
 		alert('error: ' + response.status);
 	})

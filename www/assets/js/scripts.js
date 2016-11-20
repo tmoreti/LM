@@ -3,7 +3,7 @@ var base;
 $( document ).ready(function() {
 	new WOW().init();
 	navigator.splashscreen.show();
-	verificarLogin();
+	
 
 });
 function verificarLogin(){
