@@ -3,10 +3,23 @@ var base;
 $( document ).ready(function() {
 	new WOW().init();
 	navigator.splashscreen.show();
+<<<<<<< HEAD
 	
 
 });
 
+=======
+	verificarLogin();
+
+});
+function verificarLogin(){
+	facebookConnectPlugin.getLoginStatus(function(response){
+		alert('success:' + response.status)
+	}, function(response){
+		alert('error: ' + response.status);
+	})
+}
+>>>>>>> refs/remotes/origin/master
 function inicioIndex(){
 	base=JSON.parse(localStorage.getItem("base"));
 	
