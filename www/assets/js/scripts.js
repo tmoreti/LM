@@ -139,17 +139,15 @@ function mapaBanda(id){
 
 // ----------------------- LOGIN FACEBOOK ----------------------------//
 function loginFace(){
-	facebookConnectPlugin.login(["public_profile", "user_birthday"],function(){
-		alert('sucesso');
-	},function(){
-		alert('erro');
+	facebookConnectPlugin.login(["public_profile", "user_birthday", "email"],function(){
+		document.location="index.html";
 	})
 }
 function verificarLogin(){
 	facebookConnectPlugin.getLoginStatus(
 		function(response){
 			if(response.status=='connected'){
-				alert('connected')
+				// logado
 				facebookConnectPlugin.api('/me?fields=id,name,email', null,
 					 function(response) {
 						 window.localStorage["nome"]=response.name;
@@ -157,11 +155,15 @@ function verificarLogin(){
 						 window.localStorage["email"]=response.email;
 						 window.localStorage["logado"]='1';
 						 window.localStorage["modo_login"]='facebook';
-						 document.location='logado.html';
 					 }
 				);
+
+				$('.deslogado').css('display','none');
+				$('.logadoFace').css('display','');
 			}else{
-				alert('desconectado')
+				// deslogado 
+				$('.deslogado').css('display','');
+				$('.logadoFace').css('display','none');
 			}
 		}
 	);
