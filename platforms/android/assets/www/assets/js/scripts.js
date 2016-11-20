@@ -147,12 +147,9 @@ function logoffFace(){
 	});
 }
 function loginFace(){
-	toggle_sidebar();
-	$('.corpo').fadeOut(500,function(){
-		facebookConnectPlugin.login(["public_profile", "user_birthday", "email"],function(){
-			document.location="index.html";
-		})
-	});
+	facebookConnectPlugin.login(["public_profile", "user_birthday", "email"],function(){
+		document.location="index.html";
+	})
 }
 function verificarLogin(){
 	facebookConnectPlugin.getLoginStatus(
@@ -307,6 +304,7 @@ function menu(){
 		dataType: 'html'
 	}).done(function( html ) {
 	    $('#sidebar').html(html);
+	    verificarLogin();
 	});
 }
 
