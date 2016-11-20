@@ -9,9 +9,7 @@ $( document ).ready(function() {
 function verificarLogin(){
 	facebookConnectPlugin.getLoginStatus(function(response){
 		alert('success:' + response.status);
-	}, function(response){
-		alert('error: ' + response.status);
-	})
+	});
 }
 function inicioIndex(){
 	base=JSON.parse(localStorage.getItem("base"));
