@@ -307,7 +307,10 @@ function menu(){
 	    verificarLogin();
 	});
 }
-
+function selIni(url){
+	localStorage.setItem("urlInicial",url);
+	document.location=url;
+}
 function checkConnection() {
     var networkState = navigator.connection.type;
 
@@ -444,6 +447,9 @@ function carregarBase(){
 		    localStorage.setItem("base",html);
 		    $('#indexLoad').html('');
 		    $('.indexBotao').prop('disabled', false);
+		    if(localStorage.getItem("urlInicial")){
+		    	document.location=localStorage.getItem("urlInicial");
+		    }
 		});
 	}else{
 		$('#indexLoad').html('Sem conexão com a internet');
