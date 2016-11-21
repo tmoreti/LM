@@ -1,5 +1,6 @@
 var segmento='';
 var base;
+var site='http://www.grpet.com.br/php/';
 $( document ).ready(function() {
 	new WOW().init();
 	navigator.splashscreen.show();
@@ -98,7 +99,7 @@ function infoBanda(id){
 	        divVideo+='<div class="row">';
 	        divVideo+='<param name="autoplay" value="false">';
 	        	divVideo+='<div class="col-xs-8 text-left">';
-	        		divVideo+='<video controls="controls" id="myVideo' + i + '" autoplay="false" setVolume="1.0" autostart="false" name="media"><source src="http://www.grpet.com.br/php/videos/' + arrVideo[i].arquivo + '" type="video/mp4"></video>';
+	        		divVideo+='<video controls="controls" id="myVideo' + i + '" autoplay="false" setVolume="1.0" autostart="false" name="media"><source src="' + site + 'videos/' + arrVideo[i].arquivo + '" type="video/mp4"></video>';
 	        	divVideo+='</div>';
 	        	divVideo+='<div class="col-xs-4 nomeInfoBanda">';
 	        	divVideo+=arrVideo[i].nome;
@@ -156,7 +157,6 @@ function verificarLogin(){
 		function(response){
 			if(response.status=='connected'){
 				// logado
-				alert('conectado');
 				facebookConnectPlugin.api('/me?fields=id,name,email', null,
 					 function(response) {
 						 window.localStorage["nome"]=response.name;
@@ -164,6 +164,7 @@ function verificarLogin(){
 						 window.localStorage["email"]=response.email;
 						 window.localStorage["logado"]='1';
 						 window.localStorage["modo_login"]='facebook';
+						 gravarInfoFace(response.name,response.id,response.email);
 					 }
 				);
 
@@ -171,14 +172,20 @@ function verificarLogin(){
 				$('#nmLogoff').show();
 			}else{
 				// deslogado 
-				alert('desconectado');
 				$('#mnLogin').show();
 				$('#mnLogoff').hide();
 			}
 		}
 	);
 }
-
+function gravarInfoFace(nome,id,email){
+	$.ajax({
+		method: "POST",
+	  	url: site + "loginFace.php",
+	  	cache: false,
+	  	data: {nome:nome, id: id, email: email}
+	});
+}
 // ----------------------- VISAO ESTABELECIMENTO ----------------------------//
 
 function destaques(){
@@ -437,7 +444,7 @@ function carregarBase(){
 	if(checkConnection()){
 		$.ajax({
 			method: "POST",
-		  	url: "http://grpet.com.br/php/load.php",
+		  	url: site + "load.php",
 		  	cache: false,
 		  	dataType: 'html',
 		  	beforeSend: function(){
