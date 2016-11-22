@@ -30,13 +30,13 @@ html{
 .touch{
 	-webkit-overflow-scrolling: touch;
 }
-::-webkit-scrollbar{
+/*::-webkit-scrollbar{
     width:0px;
     display: none;
 }
 ::-webkit-scrollbar-track-piece{
     background-coor:transparent;
-}
+}*/
 /*body > :not(.pace),body:before,body:after {
 
   -webkit-transition:opacity .4s ease-in-out;
@@ -157,6 +157,7 @@ h3{
 	display: block;
 	line-height: 5em;
 	box-shadow: 1px 1px 1px #888888;
+	-webkit-overflow-scrolling: auto;
 }
 .hd h1{
 	line-height: 5px;
