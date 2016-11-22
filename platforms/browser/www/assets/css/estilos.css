@@ -22,12 +22,14 @@ body{
 	background-color: #610d11;
 	z-index: -1;
 	overflow-x: hidden;
-	-webkit-overflow-scrolling: touch;
+	/*-webkit-overflow-scrolling: touch;*/
 }
 html{
+	/*-webkit-overflow-scrolling: touch;*/
+}
+.touch{
 	-webkit-overflow-scrolling: touch;
 }
-
 ::-webkit-scrollbar{
     width:0px;
     display: none;
