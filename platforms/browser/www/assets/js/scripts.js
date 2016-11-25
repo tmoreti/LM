@@ -1,11 +1,9 @@
 var segmento='';
 var base;
-var site='http://www.grpet.com.br/php/';
+var site='http://livemusicapp.com.br/livemusicapp/';
 $( document ).ready(function() {
 	new WOW().init();
 	navigator.splashscreen.show();
-	
-
 });
 
 function inicioIndex(){
@@ -251,7 +249,7 @@ function fnContratados(){
 	var qtd=rankingContratos.length;
 	
 	var str='<div class="listaBandas">';
-	for(var i=0;i<5;i++){
+	for(var i=0;i<qtd;i++){
 		var arrBanda=getBandaId(rankingContratos[i].id);
 		str+='<div class="fotoNome" style="padding:5px; min-width:170px;" onclick="detalhesBanda(\'' + arrBanda.id + '\')">';
             str+='<div class="divFoto">';
@@ -265,13 +263,13 @@ function fnContratados(){
 	$('#divContratados').html(str);
 	$('#divContratados').waitForImages(function() {
 		//funcao para add mais contratados na lista quando chegar no fim do scroll   
-		$('#divContratados .listaBandas').scroll(function(){
+		/*$('#divContratados .listaBandas').scroll(function(){
 		 	var tm=document.getElementsByClassName('listaBandas')[0].scrollWidth
 			//console.log($(this).scrollLeft());
 			if($(this).scrollLeft() + $(this).width() >= tm-5){
 				exibirMaisContratados();
 			}
-		})
+		})*/
 	}, function(loaded, count, success) {
 		if(success){
 			$(this).fadeIn('fast');
@@ -341,7 +339,7 @@ function checkConnection() {
 
 
 function irpara(url){
-	$('body').addClass('animated slideOutLeft');
+	$('body').addClass('animated fadeOut');
 		setTimeout(function(){ document.location=url; }, 1000);
 		
 }

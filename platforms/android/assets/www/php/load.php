@@ -2,7 +2,7 @@
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST');
 
-require_once('class/class.bandas.php');
+require_once('class/Bandas.class.php');
 	
 $bandas=new bandas;
 
