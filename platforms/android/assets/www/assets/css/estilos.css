@@ -22,21 +22,21 @@ body{
 	background-color: #610d11;
 	z-index: -1;
 	overflow-x: hidden;
-	-webkit-overflow-scrolling: auto;
+	-webkit-overflow-scrolling: touch;
 }
 html{
-	-webkit-overflow-scrolling: auto;
+	-webkit-overflow-scrolling: touch;
 }
 .touch{
 	-webkit-overflow-scrolling: touch;
 }
-/*::-webkit-scrollbar{
+::-webkit-scrollbar{
     width:0px;
     display: none;
 }
 ::-webkit-scrollbar-track-piece{
     background-coor:transparent;
-}*/
+}
 /*body > :not(.pace),body:before,body:after {
 
   -webkit-transition:opacity .4s ease-in-out;
