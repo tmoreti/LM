@@ -165,11 +165,12 @@ function verificarLogin(){
 						 gravarInfoFace(response.name,response.id,response.email);
 					 }
 				);
-
+				$('#mnConfiguracoes').show();
 				$('#mnLogin').hide();
 				$('#nmLogoff').show();
 			}else{
 				// deslogado 
+				$('#mnConfiguracoes').hide();
 				$('#mnLogin').show();
 				$('#mnLogoff').hide();
 			}
@@ -301,6 +302,26 @@ function fnCategorias(){
 }
 
 // ----------------------- SISTEMA ----------------------------//
+function confirmarCelular(nr){
+	var id=window.localStorage["id"];
+	var modo_login=window.localStorage["modo_login"];
+	$.ajax({
+		method: "POST",
+	  	url: site + "confirmarCelular.php",
+	  	cache: false,
+	  	data: {
+	  			numero: nr 
+	  			,id: id
+	  			,modo_login: modo_login
+	  		},
+		dataType: 'html'
+	}).done(function( html ) {
+	    // abrir popup para confirmar
+	    
+	    $('body').append('<div id="dialog" title="Basic dialog"><p>' + html + '</p></div>');
+	    $( "#dialog" ).dialog();
+	});
+}
 function menu(){
 	$.ajax({
 		method: "POST",
@@ -365,6 +386,10 @@ function irparaLoad(url){
 	$('.corpo').fadeOut(500,function(){
 		$('.corpo').load(url,function(){
 			$('.corpo').fadeIn(500);
+			if(url=='configuracoes.html'){
+				$( "#accordion" ).accordion();
+				$('#celular').mask('(99) 99999-9999');
+			}
 		});
 	});
 }
