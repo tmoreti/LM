@@ -316,7 +316,8 @@ function confirmarCelular(nr){
 	}).done(function( html ) {
 	    // abrir popup para confirmar
 	    //if(html==1){
-	    	$('body').append('<div id="dialog" title="Insira o código recebido via SMS"><input type="number" pattern="[0-9]*" maxlength="1" style="width:10px; padding:2px;" class="form-control" placeholder="0" id="c1"><input type="number" pattern="[0-9]*" maxlength="1" style="width:10px; padding:2px;" class="form-control" placeholder="0" id="c2"><input type="number" pattern="[0-9]*" maxlength="1" style="width:10px; padding:2px;" class="form-control" placeholder="0" id="c3"><input type="number" pattern="[0-9]*" maxlength="1" style="width:10px; padding:2px;" class="form-control" placeholder="0" id="c4"></div>');
+	    	$( "div" ).remove( "#dialog" );
+	    	$('body').append('<div id="dialog" title="Codigo SMS"><div class="row"><div class="col-xs-3 text-center"><input type="number" pattern="[0-9]*" maxlength="1" onkeypress="javascript:document.getElementById(\"c2\").focus()" class="form-control" placeholder="0" id="c1"></div><div class="col-xs-3 text-center"><input type="number" pattern="[0-9]*" maxlength="1" class="form-control" placeholder="0" id="c2"></div><div class="col-xs-3 text-center"><input type="number" pattern="[0-9]*" maxlength="1" class="form-control" placeholder="0" id="c3"></div><div class="col-xs-3 text-center"><input type="number" pattern="[0-9]*" maxlength="1" class="form-control" placeholder="0" id="c4"></div></div></div>');
 		    $( "#dialog" ).dialog();	
 	    //}
 	});
