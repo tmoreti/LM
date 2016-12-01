@@ -303,16 +303,14 @@ function fnCategorias(){
 
 // ----------------------- SISTEMA ----------------------------//
 function confirmarCelular(nr){
-	var id=window.localStorage["id"];
-	var modo_login=window.localStorage["modo_login"];
+	var email=window.localStorage["email"];
 	$.ajax({
 		method: "POST",
 	  	url: site + "confirmarCelular.php",
 	  	cache: false,
 	  	data: {
 	  			numero: nr 
-	  			,id: id
-	  			,modo_login: modo_login
+	  			,email: email
 	  		},
 		dataType: 'html'
 	}).done(function( html ) {

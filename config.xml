@@ -50,6 +50,7 @@
         <splash height="1136" src="www/res/screen/ios/screen-iphone-portrait-568h-2x.png" width="640" />
         <splash height="1024" src="www/res/screen/ios/screen-ipad-portrait.png" width="768" />
         <splash height="768" src="www/res/screen/ios/screen-ipad-landscape.png" width="1024" />
+        <icon height="29" src="www/res/icon/ios/icon-29.png" width="29" />
         <icon height="57" src="www/res/icon/ios/icon-57.png" width="57" />
         <icon height="72" src="www/res/icon/ios/icon-72.png" width="72" />
         <icon height="114" src="www/res/icon/ios/icon-57-2x.png" width="114" />
