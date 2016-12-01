@@ -316,7 +316,7 @@ function confirmarCelular(nr){
 	}).done(function( html ) {
 	    // abrir popup para confirmar
 	    //if(html==1){
-	    	$('body').append('<div id="dialog" title="Insira o código recebido via SMS"><input type="number" pattern="[0-9]*" maxlength="1" style="width:5px; class="form-control" placeholder="0"></div>');
+	    	$('body').append('<div id="dialog" title="Insira o código recebido via SMS"><input type="number" pattern="[0-9]*" maxlength="1" style="width:10px; padding:2px;" class="form-control" placeholder="0" id="c1"><input type="number" pattern="[0-9]*" maxlength="1" style="width:10px; padding:2px;" class="form-control" placeholder="0" id="c2"><input type="number" pattern="[0-9]*" maxlength="1" style="width:10px; padding:2px;" class="form-control" placeholder="0" id="c3"><input type="number" pattern="[0-9]*" maxlength="1" style="width:10px; padding:2px;" class="form-control" placeholder="0" id="c4"></div>');
 		    $( "#dialog" ).dialog();	
 	    //}
 	});
