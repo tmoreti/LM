@@ -315,10 +315,10 @@ function confirmarCelular(nr){
 		dataType: 'html'
 	}).done(function( html ) {
 	    // abrir popup para confirmar
-	    if(html==1){
+	    //if(html==1){
 	    	$('body').append('<div id="dialog" title="Insira o código recebido via SMS"><input type="number" pattern="[0-9]*" maxlength="1" style="width:5px; class="form-control" placeholder="0"></div>');
 		    $( "#dialog" ).dialog();	
-	    }
+	    //}
 	});
 }
 function menu(){
