@@ -302,8 +302,37 @@ function fnCategorias(){
 }
 
 // ----------------------- SISTEMA ----------------------------//
+function validarCelular(nr){
+	var c1 = $('#c1').val();
+	var c2 = $('#c2').val();
+	var c3 = $('#c3').val();
+	var c4 = $('#c4').val();
+	var code=c1.toString() + c2.toString() + c3.toString() + c4.toString();
+	var email=window.localStorage["email"];
+	var numero=nr;
+	$.ajax({
+		method: "POST",
+	  	url: site + "validarCelular.php",
+	  	cache: false,
+	  	data: {
+	  			email: email
+	  			,numero: numero
+	  			,code: code
+	  		},
+		dataType: 'html'
+	}).done(function(html){
+		if(html==1){
+			$( "#dialog" ).dialog( "close" );
+			window.localStorage["celular"]=nr;
+			navigator.notification.alert('Celular confirmado com sucesso!', function(){}, 'Live Music');
+		}else{
+			navigator.notification.alert('Houve um problema para confirmar seu celular. Por favor, tente novamente!', function(){}, 'Live Music');
+		}
+	})
+}
 function confirmarCelular(nr){
 	var email=window.localStorage["email"];
+	window.localStorage["celular"]='';
 	$.ajax({
 		method: "POST",
 	  	url: site + "confirmarCelular.php",
@@ -317,8 +346,49 @@ function confirmarCelular(nr){
 	    // abrir popup para confirmar
 	    //if(html==1){
 	    	$( "div" ).remove( "#dialog" );
-	    	$('body').append('<div id="dialog" title="Codigo SMS"><div class="row"><div class="col-xs-3 text-center"><input type="number" pattern="[0-9]*" maxlength="1" onkeypress="javascript:document.getElementById(\"c2\").focus()" class="form-control" placeholder="0" id="c1"></div><div class="col-xs-3 text-center"><input type="number" pattern="[0-9]*" maxlength="1" class="form-control" placeholder="0" id="c2"></div><div class="col-xs-3 text-center"><input type="number" pattern="[0-9]*" maxlength="1" class="form-control" placeholder="0" id="c3"></div><div class="col-xs-3 text-center"><input type="number" pattern="[0-9]*" maxlength="1" class="form-control" placeholder="0" id="c4"></div></div></div>');
-		    $( "#dialog" ).dialog();	
+
+	    	$('body').append('<div id="dialog" title="Codigo SMS"><div class="row"><div class="col-xs-3 text-center"><input type="number" pattern="[0-9]*" min="0" max="1" onkeypress="" class="form-control" placeholder="0" id="c1"></div><div class="col-xs-3 text-center"><input type="number" pattern="[0-9]*" maxlength="1" min="0" max="1" class="form-control" placeholder="0" id="c2"></div><div class="col-xs-3 text-center"><input type="number" pattern="[0-9]*" maxlength="1" min="0" max="1" class="form-control" placeholder="0" id="c3"></div><div class="col-xs-3 text-center"><input type="number" pattern="[0-9]*" min="0" max="1" maxlength="1" class="form-control" placeholder="0" id="c4"></div></div><div class="row"><div class="col-xs-12 text-center"><button id="btValidarCel" class="btn btn-default btn-block" style="margin-top:5px;" onclick="validarCelular(\'' + nr + '\')">Confirmar</button></div></div></div>');
+		    $( "#dialog" ).dialog({
+		    		width:$(window).width(),
+		    		height:$(window).height(),
+		    		position: { my: "0 0"},
+		    		show: { effect: "folde", duration: 1000, function(){
+		    			$('#c1').focus();
+		    		}},
+		    		hide: {
+				        effect: "fold",
+				        duration: 1000
+				    }
+		    });	
+
+		    $('#c1').keyup( function(e){
+			    var max = $('#c1').attr('max').length;
+			    if ($(this).val().length >= max) {
+			    	$('#c2').focus();
+			        $(this).val($(this).val().substr(0, max));
+			    }
+			});
+		   	$('#c2').keyup( function(e){
+			    var max = $('#c2').attr('max').length;
+			    if ($(this).val().length >= max) {
+			    	$('#c3').focus();
+			        $(this).val($(this).val().substr(0, max));
+			    }
+			});
+			$('#c3').keyup( function(e){
+			    var max = $('#c3').attr('max').length;
+			    if ($(this).val().length >= max) {
+			    	$('#c4').focus();
+			        $(this).val($(this).val().substr(0, max));
+			    }
+			});
+			$('#c4').keyup( function(e){
+			    var max = $('#c4').attr('max').length;
+			    if ($(this).val().length >= max) {
+			    	$('#btValidarCel').focus();
+			        $(this).val($(this).val().substr(0, max));
+			    }
+			});
 	    //}
 	});
 }
@@ -389,6 +459,9 @@ function irparaLoad(url){
 			if(url=='configuracoes.html'){
 				$( "#accordion" ).accordion();
 				$('#celular').mask('(99) 99999-9999');
+				if(window.localStorage["celular"]!=''){
+					$('#celular').val(window.localStorage["celular"]);
+				}
 			}
 		});
 	});
