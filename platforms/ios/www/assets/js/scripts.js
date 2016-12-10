@@ -168,8 +168,10 @@ function verificarLogin(){
 				$('#mnConfiguracoes').show();
 				$('#mnLogin').hide();
 				$('#nmLogoff').show();
+				$('#minhaBanda').show();
 			}else{
 				// deslogado 
+				$('#minhaBanda').hide();
 				$('#mnConfiguracoes').hide();
 				$('#mnLogin').show();
 				$('#mnLogoff').hide();
