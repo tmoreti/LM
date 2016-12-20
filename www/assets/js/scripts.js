@@ -464,11 +464,21 @@ function irparaLoad(url){
 				if(window.localStorage["celular"]!=''){
 					$('#celular').val(window.localStorage["celular"]);
 				}
+				if(window.localStorage["cartao"]!=''){
+					$('#existeCartao').css('display','');
+					$('#btAddCartao').css('display','none');
+				}else{
+					$('#existeCartao').css('display','none');
+					$('#btAddCartao').css('display','');
+				}
 			}
 		});
 	});
 }
-
+function editarCartao(){
+	$('#editCartao').fadeIn('slow');
+	$('#cartaoInfo').fadeOut('slow');
+}
 function detalhesBanda(id){
 	$('.corpo').fadeOut(500,function(){
 		$('.corpo').load('bandasNovo.html?id=' + id,function(){

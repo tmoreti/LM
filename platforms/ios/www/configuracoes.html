@@ -12,8 +12,37 @@
   </div>
   <h3>Cartão de Credito</h3>
   <div>
-    <p>
-    
-    </p>
+    <div class="row" id="btAddCartao">
+      <div class="col-xs-12 text-center"><button class="btn botaoCategoria">Adicionar cartão</button></div>
+    </div>
+    <div  id="existeCartao">
+      <div class="row" id="btEditarCartao">
+        <div class="col-xs-12 text-center"><button class="btn botaoCategoria" onclick="editarCartao()">Editar</button></div>
+      </div>
+      <div id="cartaoInfo">
+          <div class="row">&nbsp;</div>
+          <div class="row">
+            <div class="col-xs-12 text-center"><span id="nomeCartao">Titular: Thiago A Moreti</span></div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 text-center"><span id="numeroCartao">Número: XXXX-XXXX-XXXX-1234</span></div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 text-center"><span id="vencimentoCartao">Vencimento: 12/2017</span></div>
+          </div>
+      </div>
+      <div id="editCartao" style="display:none">
+          <div class="row">&nbsp;</div>
+          <div class="row">
+            <div class="col-xs-12 text-center"><input type="text" class="form-control" value="Titular: Thiago A Moreti"></span></div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 text-center"><span id="numeroCartao">Número: XXXX-XXXX-XXXX-1234</span></div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 text-center"><span id="vencimentoCartao">Vencimento: 12/2017</span></div>
+          </div>
+      </div>
+    </div>
   </div>
 </div>
