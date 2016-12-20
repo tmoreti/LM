@@ -464,8 +464,8 @@ function irparaLoad(url){
 				if(window.localStorage["celular"]!=''){
 					$('#celular').val(window.localStorage["celular"]);
 				}
-				alert(window.localStorage["cartao"]);
-				if(window.localStorage["cartao"]!=''){
+				//alert(window.localStorage["cartao"]);
+				if(window.localStorage["cartao"]!=undefined){
 					$('#existeCartao').css('display','');
 					$('#btAddCartao').css('display','none');
 				}else{
