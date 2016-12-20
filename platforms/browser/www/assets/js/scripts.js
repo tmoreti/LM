@@ -464,6 +464,7 @@ function irparaLoad(url){
 				if(window.localStorage["celular"]!=''){
 					$('#celular').val(window.localStorage["celular"]);
 				}
+				alert(window.localStorage["cartao"]);
 				if(window.localStorage["cartao"]!=''){
 					$('#existeCartao').css('display','');
 					$('#btAddCartao').css('display','none');
