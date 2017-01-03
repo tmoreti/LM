@@ -486,10 +486,12 @@ function salvarCartao(){
 	window.localStorage["cartao"]=$('#txtCartao').val();
 	window.localStorage["titular"]=$('#txtTitular').val();
 	window.localStorage["vencimento"]=$('#txtVencimento').val();
+	irparaLoad('configuracoes.html');
 }
 function editarCartao(){
 	$('#AddCartao').fadeIn('slow');
 	$('#cartaoInfo').fadeOut('slow');
+	$('#existeCartao').css('display','none');
 }
 function detalhesBanda(id){
 	$('.corpo').fadeOut(500,function(){
