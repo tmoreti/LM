@@ -469,20 +469,26 @@ function irparaLoad(url){
 				//alert(window.localStorage["cartao"]);
 				if(window.localStorage["cartao"]!=undefined){
 					$('#existeCartao').css('display','');
-					$('#btAddCartao').css('display','none');
+					$('#AddCartao').css('display','none');
+					$('#txtCartao').val(window.localStorage["cartao"]);
+					$('#txtTitular').val(window.localStorage["titular"]);
+					$('#txtVencimento').val(window.localStorage["vencimento"]);
+
 				}else{
 					$('#existeCartao').css('display','none');
-					$('#btAddCartao').css('display','');
+					$('#AddCartao').css('display','');
 				}
 			}
 		});
 	});
 }
-function addCartao(){
-	alert($('#txtCartao').val());
+function salvarCartao(){
+	window.localStorage["cartao"]=$('#txtCartao').val();
+	window.localStorage["titular"]=$('#txtTitular').val();
+	window.localStorage["vencimento"]=$('#txtVencimento').val();
 }
 function editarCartao(){
-	$('#editCartao').fadeIn('slow');
+	$('#AddCartao').fadeIn('slow');
 	$('#cartaoInfo').fadeOut('slow');
 }
 function detalhesBanda(id){
