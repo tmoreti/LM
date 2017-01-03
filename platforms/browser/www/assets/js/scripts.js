@@ -462,7 +462,7 @@ function irparaLoad(url){
 				$( "#accordion" ).accordion();
 				$('#celular').mask('(99) 99999-9999');
 				$('#txtVencimento').mask('99/9999');
-				$('#txtCartao').mask('9999 9999 9999 9999');
+				$('#txtCartao').mask('9999-9999-9999-9999');
 				if(window.localStorage["celular"]!=''){
 					$('#celular').val(window.localStorage["celular"]);
 				}
