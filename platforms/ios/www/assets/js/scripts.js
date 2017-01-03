@@ -453,8 +453,10 @@ function abrirLinkExterno(link){
     }
 }
 
-function irparaLoad(url){
-	toggle_sidebar();
+function irparaLoad(url,tgl){
+	if(tgl==undefined){
+		toggle_sidebar();
+	}
 	$('.corpo').fadeOut(500,function(){
 		$('.corpo').load(url,function(){
 			$('.corpo').fadeIn(500);
@@ -468,12 +470,15 @@ function irparaLoad(url){
 				}
 				//alert(window.localStorage["cartao"]);
 				if(window.localStorage["cartao"]!=undefined){
+					var nrcartao=window.localStorage["cartao"];
 					$('#existeCartao').css('display','');
 					$('#AddCartao').css('display','none');
 					$('#txtCartao').val(window.localStorage["cartao"]);
 					$('#txtTitular').val(window.localStorage["titular"]);
 					$('#txtVencimento').val(window.localStorage["vencimento"]);
-
+					$('#numeroCartao').val("XXXX-XXXX-XXXX-" + nrcartao.substr(-4));
+					$('#nomeCartao').val(window.localStorage["titular"]);
+					$('#vencimentoCartao').val(window.localStorage["vencimento"]);
 				}else{
 					$('#existeCartao').css('display','none');
 					$('#AddCartao').css('display','');
@@ -486,7 +491,8 @@ function salvarCartao(){
 	window.localStorage["cartao"]=$('#txtCartao').val();
 	window.localStorage["titular"]=$('#txtTitular').val();
 	window.localStorage["vencimento"]=$('#txtVencimento').val();
-	irparaLoad('configuracoes.html');
+	irparaLoad('configuracoes.html',1);
+
 }
 function editarCartao(){
 	$('#AddCartao').fadeIn('slow');
