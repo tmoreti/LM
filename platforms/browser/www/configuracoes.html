@@ -18,12 +18,12 @@
             <div class="col-xs-12 text-center"><input type="text" id="txtTitular" placeholder="Titular do cartão" class="form-control"></div>
           </div>
           <div class="row">
-            <div class="col-xs-12 text-center"><input type="number" id="txtCartao" placeholder="Número do cartão" class="form-control"></div>
+            <div class="col-xs-12 text-center"><input type="number" id="txtCartao" pattern="[0-9]*" placeholder="Número do cartão" class="form-control"></div>
           </div>
           <div class="row">
-            <div class="col-xs-12 text-center"><input type="text" id="txtVencimento" placeholder="Vencimento" class="form-control" style="width:50px;"></div>
+            <div class="col-xs-12 text-center"><input type="text" id="txtVencimento" placeholder="Vencimento" class="form-control" style="width:150px;"></div>
           </div>
-          <div class="col-xs-12 text-center"><button class="btn botaoCategoria">Adicionar cartão</button></div>
+          <div class="col-xs-12 text-center"><button class="btn botaoCategoria" onclick="addCartao()">Adicionar cartão</button></div>
     </div>
     <div  id="existeCartao">
       <div class="row" id="btEditarCartao">
