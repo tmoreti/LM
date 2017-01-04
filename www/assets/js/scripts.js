@@ -476,9 +476,9 @@ function irparaLoad(url,tgl){
 					$('#txtCartao').val(window.localStorage["cartao"]);
 					$('#txtTitular').val(window.localStorage["titular"]);
 					$('#txtVencimento').val(window.localStorage["vencimento"]);
-					$('#numeroCartao').val("XXXX-XXXX-XXXX-" + nrcartao.substr(-4));
-					$('#nomeCartao').val(window.localStorage["titular"]);
-					$('#vencimentoCartao').val(window.localStorage["vencimento"]);
+					$('#numeroCartao').html("Número: XXXX-XXXX-XXXX-" + nrcartao.substr(-4));
+					$('#nomeCartao').html('Titular: ' + window.localStorage["titular"]);
+					$('#vencimentoCartao').html('Vencimento: ' + window.localStorage["vencimento"]);
 				}else{
 					$('#existeCartao').css('display','none');
 					$('#AddCartao').css('display','');
