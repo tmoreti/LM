@@ -20,6 +20,8 @@
     <icon src="icon.png" />
     <plugin name="cordova-plugin-dialogs" />
     <plugin name="cordova-plugin-statusbar" />
+    <plugin name="mp-cordova-plugin-camera"/>
+    <plugin name="cordova-plugin-file-transfer"/>
     <preference name="Orientation" value="portrait" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#000000" />
