@@ -43,6 +43,10 @@
                         {
                             "xml": "<preference name=\"android-minSdkVersion\" value=\"15\" />",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -52,6 +56,10 @@
                     "/*": [
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
                             "count": 1
                         }
                     ],
@@ -66,6 +74,10 @@
                         },
                         {
                             "xml": "<activity android:configChanges=\"keyboard|keyboardHidden|screenLayout|screenSize|orientation\" android:label=\"@string/fb_app_name\" android:name=\"com.facebook.FacebookActivity\" android:theme=\"@android:style/Theme.Translucent.NoTitleBar\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<provider android:authorities=\"${applicationId}.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"android.support.v4.content.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/provider_paths\" /></provider>",
                             "count": 1
                         }
                     ]
@@ -121,6 +133,9 @@
         "cordova-plugin-facebook4": {
             "APP_ID": "207294053050026",
             "APP_NAME": "Live Music",
+            "PACKAGE_NAME": "br.com.livemusic.livemusic"
+        },
+        "cordova-plugin-camera": {
             "PACKAGE_NAME": "br.com.livemusic.livemusic"
         }
     },

@@ -121,12 +121,15 @@
         "is_top_level": true,
         "variables": {}
     },
-    "mp-cordova-plugin-camera": {
+    "cordova-plugin-camera": {
         "source": {
             "type": "registry",
-            "id": "mp-cordova-plugin-camera"
+            "id": "cordova-plugin-camera"
         },
         "is_top_level": true,
-        "variables": {}
+        "variables": {
+            "CAMERA_USAGE_DESCRIPTION": "Acesso a camera",
+            "PHOTOLIBRARY_USAGE_DESCRIPTION": "Acesso a camera"
+        }
     }
 }

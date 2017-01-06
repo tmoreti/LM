@@ -2,12 +2,14 @@ function teste(){
 	alert('teste')
 }
 function selecionarFoto(){
+
 	navigator.camera.getPicture(uploadPhoto, function(message) {
 	 	alert('get picture failed');
 	}, {
 	 quality: 100,
 	 destinationType: navigator.camera.DestinationType.FILE_URI,
-	 sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
+	 //sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
+	 sourceType: pictureSource.PHOTOLIBRARY
 	});
 }
 
@@ -29,4 +31,4 @@ var ft = new FileTransfer();
  }, function(error){
  console.log(JSON.stringify(error));
  }, options);
- }
+}
