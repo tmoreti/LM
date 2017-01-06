@@ -164,7 +164,7 @@ h3{
 .hd button{
 	color: #fff !important;
 	background: transparent !important;
-	box-shadow: 1px 1px 1px #888888;
+	/*box-shadow: 1px 1px 1px #888888;*/
 	text-shadow: 1px 1px 1px #888;
 	font-size: 2em;
 }
