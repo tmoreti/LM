@@ -14,6 +14,9 @@
     <access origin="https://api.facebook.com" />
     <access origin="https://*.fbcdn.net" />
     <access origin="https://*.akamaihd.net" />
+    <feature name="Camera">
+        <param name="browser-package" value="Camera" />
+    </feature>
     <name>Live Music</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
