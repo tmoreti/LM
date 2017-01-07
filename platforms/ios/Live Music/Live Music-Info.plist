@@ -32,17 +32,6 @@
     <string/>
     <key>NSMainNibFile~ipad</key>
     <string/>
-    <key>UIRequiresFullScreen</key>
-    <true/>
-    <key>NSAppTransportSecurity</key>
-    <dict>
-      <key>NSAllowsArbitraryLoads</key>
-      <true/>
-    </dict>
-    <key>UIInterfaceOrientation</key>
-    <array>
-      <string>UIInterfaceOrientationPortrait</string>
-    </array>
     <key>UISupportedInterfaceOrientations</key>
     <array>
       <string>UIInterfaceOrientationPortrait</string>
@@ -53,24 +42,48 @@
       <string>UIInterfaceOrientationPortrait</string>
       <string>UIInterfaceOrientationPortraitUpsideDown</string>
     </array>
+    <key>UIRequiresFullScreen</key>
+    <true/>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <key>NSExceptionDomains</key>
+      <dict>
+        <key>m.facebook.com</key>
+        <dict/>
+        <key>graph.facebook.com</key>
+        <dict/>
+        <key>api.facebook.com</key>
+        <dict/>
+        <key>fbcdn.net</key>
+        <dict>
+          <key>NSIncludesSubdomains</key>
+          <true/>
+        </dict>
+        <key>akamaihd.net</key>
+        <dict>
+          <key>NSIncludesSubdomains</key>
+          <true/>
+        </dict>
+      </dict>
+      <key>NSAllowsArbitraryLoads</key>
+      <true/>
+    </dict>
+    <key>UIInterfaceOrientation</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+    </array>
+    <key>NSCameraUsageDescription</key>
+    <string>Acesso a camera</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Acesso a camera</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string/>
     <key>FacebookAppID</key>
     <string>207294053050026</string>
     <key>FacebookDisplayName</key>
     <string>Live Music</string>
     <key>CFBundleURLTypes</key>
     <array>
-      <dict>
-        <key>CFBundleURLSchemes</key>
-        <array>
-          <string>fb207294053050026</string>
-        </array>
-      </dict>
-      <dict>
-        <key>CFBundleURLSchemes</key>
-        <array>
-          <string>fb207294053050026</string>
-        </array>
-      </dict>
       <dict>
         <key>CFBundleURLSchemes</key>
         <array>
@@ -85,11 +98,5 @@
       <string>fbauth2</string>
       <string>fbshareextension</string>
     </array>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string/>
-    <key>NSCameraUsageDescription</key>
-    <string>Acesso a camera</string>
-    <key>NSPhotoLibraryUsageDescription</key>
-    <string>Acesso a camera</string>
   </dict>
 </plist>

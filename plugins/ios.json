@@ -1,66 +1,10 @@
 {
     "prepare_queue": {
-        "installed": [
-            {
-                "plugin": "cordova-plugin-facebook4",
-                "vars": {
-                    "APP_ID": "207294053050026",
-                    "APP_NAME": "Live Music"
-                },
-                "topLevel": true
-            }
-        ],
+        "installed": [],
         "uninstalled": []
     },
     "config_munge": {
-        "files": {
-            "config.xml": {
-                "parents": {
-                    "/*": [
-                        {
-                            "xml": "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"NetworkStatus\"><param name=\"ios-package\" value=\"CDVConnection\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>",
-                            "count": 1
-                        }
-                    ]
-                }
-            },
-            "framework": {
-                "parents": {
-                    "CoreGraphics.framework": [
-                        {
-                            "xml": false,
-                            "count": 1
-                        }
-                    ],
-                    "SystemConfiguration.framework": [
-                        {
-                            "xml": true,
-                            "count": 1
-                        }
-                    ],
-                    "CoreTelephony.framework": [
-                        {
-                            "xml": false,
-                            "count": 1
-                        }
-                    ],
-                    "AudioToolbox.framework": [
-                        {
-                            "xml": true,
-                            "count": 1
-                        }
-                    ]
-                }
-            }
-        }
+        "files": {}
     },
     "installed_plugins": {
         "com.hutchind.cordova.plugins.streamingmedia": {
@@ -69,11 +13,36 @@
         "com.plidstone.phonegap.plugins.video-thumbnail": {
             "PACKAGE_NAME": "br.com.livemusic.livemusic"
         },
+        "cordova-plugin-camera": {
+            "CAMERA_USAGE_DESCRIPTION": "Acesso a camera",
+            "PHOTOLIBRARY_USAGE_DESCRIPTION": "Acesso a camera",
+            "PACKAGE_NAME": "br.com.livemusic.livemusic"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "br.com.livemusic.livemusic"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "br.com.livemusic.livemusic"
+        },
+        "cordova-plugin-facebook4": {
+            "APP_ID": "207294053050026",
+            "APP_NAME": "Live Music",
+            "PACKAGE_NAME": "br.com.livemusic.livemusic"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "br.com.livemusic.livemusic"
+        },
         "cordova-plugin-geolocation": {
             "GEOLOCATION_USAGE_DESCRIPTION": " ",
             "PACKAGE_NAME": "br.com.livemusic.livemusic"
         },
         "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "br.com.livemusic.livemusic"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "br.com.livemusic.livemusic"
+        },
+        "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "br.com.livemusic.livemusic"
         },
         "cordova-plugin-statusbar": {
@@ -84,27 +53,16 @@
         },
         "jaeger.Html5Video": {
             "PACKAGE_NAME": "br.com.livemusic.livemusic"
-        },
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "br.com.livemusic.livemusic"
-        },
-        "cordova-plugin-network-information": {
-            "PACKAGE_NAME": "br.com.livemusic.livemusic"
-        },
-        "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "br.com.livemusic.livemusic"
-        },
-        "cordova-plugin-compat": {
-            "PACKAGE_NAME": "br.com.livemusic.livemusic"
-        },
-        "cordova-plugin-camera": {
-            "CAMERA_USAGE_DESCRIPTION": "Acesso a camera",
-            "PHOTOLIBRARY_USAGE_DESCRIPTION": "Acesso a camera",
-            "PACKAGE_NAME": "br.com.livemusic.livemusic"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-device": {
+            "PACKAGE_NAME": "br.com.livemusic.livemusic"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "br.com.livemusic.livemusic"
+        },
+        "cordova-plugin-webviewcolor": {
             "PACKAGE_NAME": "br.com.livemusic.livemusic"
         }
     }
