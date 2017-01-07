@@ -136,8 +136,7 @@
         },
         "is_top_level": true,
         "variables": {
-            "CAMERA_USAGE_DESCRIPTION": "Acesso a camera",
-            "PHOTOLIBRARY_USAGE_DESCRIPTION": "Acesso a camera"
+            "CAMERA_USAGE_DESCRIPTION": "Acesso a camera"
         }
     }
 }
