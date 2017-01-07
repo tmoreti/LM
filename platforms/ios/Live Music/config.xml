@@ -77,8 +77,14 @@
     <icon height="57" src="www/res/icon/ios/icon-57.png" width="57" />
     <icon height="57" src="www/res/icon/ios/icon-58.png" width="58" />
     <icon height="72" src="www/res/icon/ios/icon-72.png" width="72" />
+    <icon height="87" src="www/res/icon/ios/icon-72-2x.png" width="87" />
     <icon height="114" src="www/res/icon/ios/icon-57-2x.png" width="114" />
     <icon height="144" src="www/res/icon/ios/icon-72-2x.png" width="144" />
+    <icon height="40" src="www/res/icon/ios/icon-72-2x.png" width="40" />
+    <icon height="60" src="www/res/icon/ios/icon-72-2x.png" width="60" />
+    <icon height="80" src="www/res/icon/ios/icon-72-2x.png" width="80" />
+    <icon height="120" src="www/res/icon/ios/icon-72-2x.png" width="120" />
+    <icon height="180" src="www/res/icon/ios/icon-72-2x.png" width="180" />
     <preference name="AllowInlineMediaPlayback" value="false" />
     <preference name="BackupWebStorage" value="cloud" />
     <preference name="DisallowOverscroll" value="false" />

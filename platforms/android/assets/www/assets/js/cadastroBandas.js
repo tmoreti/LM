@@ -7,14 +7,17 @@ function selecionarFoto(){
 	 	alert('get picture failed');
 	}, {
 	 quality: 100,
-	 destinationType: navigator.camera.DestinationType.FILE_URI,
-	 //sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
-	 sourceType: pictureSource.PHOTOLIBRARY
+	 destinationType: navigator.camera.DestinationType.DATA_URL,
+	 sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
 	});
 }
 
 function uploadPhoto(imageURI) {
- var options = new FileUploadOptions();
+
+	var image = document.getElementById('myImage');
+   image.src = "data:image/jpeg;base64," + imageURI;
+
+ /*var options = new FileUploadOptions();
  options.fileKey = "file";
  options.fileName = imageURI.substr(imageURI.lastIndexOf('/') + 1);
  options.mimeType = "image/jpeg";
@@ -30,5 +33,5 @@ var ft = new FileTransfer();
  console.log(JSON.stringify(result));
  }, function(error){
  console.log(JSON.stringify(error));
- }, options);
+ }, options);*/
 }
