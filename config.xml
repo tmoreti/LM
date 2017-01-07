@@ -46,6 +46,7 @@
         <feature name="Geolocation">
             <param name="ios-package" value="CDVLocation" />
         </feature>
+        <preference name="prerendered-icon" value="true" />
         <plugin name="cordova-plugin-geolocation" value="CDVLocation" />
         <splash height="480" src="www/res/screen/ios/screen-iphone-portrait.png" width="320" />
         <splash height="960" src="www/res/screen/ios/screen-iphone-portrait-2x.png" width="640" />
