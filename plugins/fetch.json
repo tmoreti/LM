@@ -132,11 +132,11 @@
     "cordova-plugin-camera": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-camera"
+            "id": "cordova-plugin-camera@~2.3.1"
         },
         "is_top_level": true,
         "variables": {
-            "CAMERA_USAGE_DESCRIPTION": "Acesso a camera"
+            "NSCAMERAUSAGEDESCRIPTION": "Acesso a camera"
         }
     }
 }
