@@ -43,10 +43,6 @@
                         {
                             "xml": "<access origin=\"https://*.akamaihd.net\" />",
                             "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Camera\"><param name=\"browser-package\" value=\"Camera\" /></feature>",
-                            "count": 1
                         }
                     ]
                 }
@@ -87,9 +83,6 @@
         "cordova-plugin-facebook4": {
             "APP_ID": "207294053050026",
             "APP_NAME": "Live Music",
-            "PACKAGE_NAME": "br.com.livemusic.livemusic"
-        },
-        "cordova-plugin-camera": {
             "PACKAGE_NAME": "br.com.livemusic.livemusic"
         }
     },

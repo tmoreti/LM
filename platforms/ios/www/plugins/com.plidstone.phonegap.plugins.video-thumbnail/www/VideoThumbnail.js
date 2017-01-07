@@ -1,4 +1,5 @@
-cordova.define("com.plidstone.phonegap.plugins.video-thumbnail.VideoThumbnail", function(require, exports, module) { /**
+cordova.define("com.plidstone.phonegap.plugins.video-thumbnail.VideoThumbnail", function(require, exports, module) {
+/**
  * Constructor.
  *
  */

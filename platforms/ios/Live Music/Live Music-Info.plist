@@ -29,37 +29,13 @@
     <key>LSRequiresIPhoneOS</key>
     <true/>
     <key>NSMainNibFile</key>
-    <string></string>
+    <string/>
     <key>NSMainNibFile~ipad</key>
-    <string></string>
+    <string/>
     <key>UIRequiresFullScreen</key>
     <true/>
     <key>NSAppTransportSecurity</key>
     <dict>
-      <key>NSExceptionDomains</key>
-      <dict>
-        <key>facebook.com</key>
-        <dict>
-          <key>NSIncludesSubdomains</key>
-          <true/>
-          <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-          <false/>
-        </dict>
-        <key>fbcdn.net</key>
-        <dict>
-          <key>NSIncludesSubdomains</key>
-          <true/>
-          <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-          <false/>
-        </dict>
-        <key>akamaihd.net</key>
-        <dict>
-          <key>NSIncludesSubdomains</key>
-          <true/>
-          <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-          <false/>
-        </dict>
-      </dict>
       <key>NSAllowsArbitraryLoads</key>
       <true/>
     </dict>
@@ -109,11 +85,11 @@
       <string>fbauth2</string>
       <string>fbshareextension</string>
     </array>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string/>
     <key>NSCameraUsageDescription</key>
     <string>Acesso a camera</string>
     <key>NSPhotoLibraryUsageDescription</key>
     <string>Acesso a camera</string>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string></string>
   </dict>
 </plist>

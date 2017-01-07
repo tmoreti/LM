@@ -1,4 +1,5 @@
-cordova.define("cordova-plugin-webviewcolor.WebViewColor", function(require, exports, module) { function WebViewColor() {
+cordova.define("cordova-plugin-webviewcolor.WebViewColor", function(require, exports, module) {
+function WebViewColor() {
 }
 
 WebViewColor.prototype.change = function (hexColor, successCallback, errorCallback) {

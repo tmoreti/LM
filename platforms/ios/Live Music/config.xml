@@ -47,6 +47,9 @@
     <feature name="Notification">
         <param name="ios-package" value="CDVNotification" />
     </feature>
+    <feature name="Camera">
+        <param name="ios-package" value="CDVCamera" />
+    </feature>
     <name>Live Music</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -90,21 +93,8 @@
     <preference name="PaginationBreakingMode" value="page" />
     <preference name="PaginationMode" value="unpaginated" />
     <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="CameraUsesGeolocation" value="false" />
     <preference name="Orientation" value="portrait" />
     <preference name="StatusBarBackgroundColor" value="#000000" />
     <preference name="StatusBarStyle" value="lightcontent" />
-    <feature name="FacebookConnectPlugin">
-        <param name="ios-package" value="FacebookConnectPlugin" />
-        <param name="onload" value="true" />
-    </feature>
-    <plugin name="FacebookConnectPlugin" value="FacebookConnectPlugin" />
-    <access origin="https://m.facebook.com" />
-    <access origin="https://graph.facebook.com" />
-    <access origin="https://api.facebook.com" />
-    <access origin="https://*.fbcdn.net" />
-    <access origin="https://*.akamaihd.net" />
-    <feature name="Camera">
-        <param name="ios-package" value="CDVCamera" />
-    </feature>
-    <preference name="CameraUsesGeolocation" value="false" />
 </widget>

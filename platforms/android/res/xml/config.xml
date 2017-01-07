@@ -1,17 +1,39 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="br.com.livemusic.livemusic" version="0.0.6" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <preference name="loglevel" value="DEBUG" />
     <feature name="StreamingMedia">
         <param name="android-package" value="com.hutchind.cordova.plugins.streamingmedia.StreamingMedia" />
     </feature>
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+    <feature name="FacebookConnectPlugin">
+        <param name="android-package" value="org.apache.cordova.facebook.ConnectPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <access origin="https://m.facebook.com" />
+    <access origin="https://graph.facebook.com" />
+    <access origin="https://api.facebook.com" />
+    <access origin="https://*.fbcdn.net" />
+    <access origin="https://*.akamaihd.net" />
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <allow-navigation href="cdvfile:*" />
+    <feature name="FileTransfer">
+        <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
+    </feature>
     <feature name="Geolocation">
         <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
     </feature>
     <feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
     </feature>
     <feature name="SplashScreen">
         <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
@@ -28,42 +50,9 @@
     <feature name="Html5Video">
         <param name="android-package" value="org.apache.cordova.plugin.Html5Video" />
     </feature>
-    <feature name="NetworkStatus">
-        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
-    </feature>
-    <feature name="Notification">
-        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
-    </feature>
-    <feature name="FacebookConnectPlugin">
-        <param name="android-package" value="org.apache.cordova.facebook.ConnectPlugin" />
-        <param name="onload" value="true" />
-    </feature>
-    <access origin="https://m.facebook.com" />
-    <access origin="https://graph.facebook.com" />
-    <access origin="https://api.facebook.com" />
-    <access origin="https://*.fbcdn.net" />
-    <access origin="https://*.akamaihd.net" />
     <feature name="Camera">
         <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
     </feature>
-    <feature name="FileTransfer">
-        <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
-    </feature>
-    <feature name="File">
-        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
-        <param name="onload" value="true" />
-    </feature>
-    <allow-navigation href="cdvfile:*" />
-    <preference name="android-minSdkVersion" value="15" />
-    <allow-intent href="market:*" />
-    <splash qualifier="ldpi" src="www/res/screen/android/screen-ldpi-portrait.png" />
-    <splash qualifier="mdpi" src="www/res/screen/android/screen-mdpi-portrait.png" />
-    <splash qualifier="hdpi" src="www/res/screen/android/screen-hdpi-portrait.png" />
-    <splash qualifier="xhdpi" src="www/res/screen/android/screen-xhdpi-portrait.png" />
-    <icon qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
-    <icon qualifier="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />
-    <icon qualifier="hdpi" src="www/res/icon/android/icon-72-hdpi.png" />
-    <icon qualifier="xhdpi" src="www/res/icon/android/icon-96-xhdpi.png" />
     <name>Live Music</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -80,8 +69,19 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <icon src="icon.png" />
+    <allow-intent href="market:*" />
+    <splash qualifier="ldpi" src="www/res/screen/android/screen-ldpi-portrait.png" />
+    <splash qualifier="mdpi" src="www/res/screen/android/screen-mdpi-portrait.png" />
+    <icon qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
+    <icon qualifier="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />
+    <splash qualifier="xhdpi" src="www/res/screen/android/screen-xhdpi-portrait.png" />
+    <splash qualifier="hdpi" src="www/res/screen/android/screen-hdpi-portrait.png" />
+    <icon qualifier="hdpi" src="www/res/icon/android/icon-72-hdpi.png" />
+    <icon qualifier="xhdpi" src="www/res/icon/android/icon-96-xhdpi.png" />
+    <preference name="loglevel" value="DEBUG" />
     <preference name="Orientation" value="portrait" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#000000" />
     <preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="android-minSdkVersion" value="15" />
 </widget>
