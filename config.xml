@@ -62,9 +62,10 @@
         <icon height="144" src="www/res/icon/ios/icon-72-2x.png" width="144" />
         <icon height="40" src="www/res/icon/ios/icon-72-2x.png" width="40" />
         <icon height="60" src="www/res/icon/ios/icon-72-2x.png" width="60" />
-        <icon height="80" src="www/res/icon/ios/icon-72-2x.png" width="80" />
-        <icon height="120" src="www/res/icon/ios/icon-72-2x.png" width="120" />
-        <icon height="180" src="www/res/icon/ios/icon-72-2x.png" width="180" />
+        
+        <icon height="152" src="www/res/icon/ios/icon-152.png" width="152" />
+        <icon height="76" src="www/res/icon/ios/icon-76.png" width="76" />
+        <icon height="120" src="www/res/icon/ios/icon-120.png" width="120" />
         <plugin name="cordova-plugin-network-information" value="CDVConnection" />
     </platform>
     <plugin name="cordova-plugin-facebook4" spec="~1.7.4">
