@@ -8,8 +8,7 @@ function selecionarFoto(){
 	}, {
 	 quality: 100,
 	 destinationType: navigator.camera.DestinationType.FILE_URI,
-	 //sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
-	 sourceType: pictureSource.PHOTOLIBRARY
+	 sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
 	});
 }
 
