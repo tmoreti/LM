@@ -50,6 +50,9 @@
         },
         "cordova-plugin-camera": {
             "PACKAGE_NAME": "br.com.livemusic.livemusic"
+        },
+        "cordova-plugin-ios-camera-permissions": {
+            "PACKAGE_NAME": "br.com.livemusic.livemusic"
         }
     },
     "dependent_plugins": {

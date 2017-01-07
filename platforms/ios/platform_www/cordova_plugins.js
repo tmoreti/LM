@@ -366,6 +366,7 @@ module.exports.metadata =
     "cordova-plugin-file-transfer": "1.6.1",
     "cordova-plugin-geolocation": "2.4.1-dev",
     "cordova-plugin-inappbrowser": "1.5.0",
+    "cordova-plugin-ios-camera-permissions": "1.0.4",
     "cordova-plugin-network-information": "1.3.1-dev",
     "cordova-plugin-splashscreen": "4.0.1-dev",
     "cordova-plugin-statusbar": "2.2.0",

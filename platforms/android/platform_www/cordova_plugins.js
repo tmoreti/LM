@@ -361,7 +361,8 @@ module.exports.metadata =
     "cordova-plugin-webviewcolor": "2.0.0",
     "cordova-plugin-whitelist": "1.3.0",
     "jaeger.Html5Video": "1.2.2",
-    "cordova-plugin-camera": "2.3.1"
+    "cordova-plugin-camera": "2.3.1",
+    "cordova-plugin-ios-camera-permissions": "1.0.4"
 };
 // BOTTOM OF METADATA
 });

@@ -138,5 +138,13 @@
         "variables": {
             "NSCAMERAUSAGEDESCRIPTION": "Acesso a camera"
         }
+    },
+    "cordova-plugin-ios-camera-permissions": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-ios-camera-permissions"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

@@ -75,4 +75,5 @@
         <variable name="NSPhotoLibraryUsageDescription" value="Acesso a camera" />
         <variable name="CAMERA_USAGE_DESCRIPTION" value="Acesso a camera" />
     </plugin>
+    <plugin name="cordova-plugin-ios-camera-permissions" spec="~1.0.4" />
 </widget>
