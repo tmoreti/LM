@@ -13,7 +13,7 @@ function carregarBase(){
 		    $('#indexLoad').html('');
 		    $('.indexBotao').prop('disabled', false);
 		    if(localStorage.getItem("urlInicial")){
-		    	document.location=localStorage.getItem("urlInicial");
+		    	//document.location=localStorage.getItem("urlInicial");
 		    }
 		});
 	}else{
