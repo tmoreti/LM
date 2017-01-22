@@ -10,6 +10,7 @@ function carregarBase(){
 		  	}
 		}).done(function( html ) {
 		    localStorage.setItem("base",html);
+		    base=JSON.parse(localStorage.getItem("base"));
 		    $('#indexLoad').html('');
 		    $('.indexBotao').prop('disabled', false);
 		    if(localStorage.getItem("urlInicial")){

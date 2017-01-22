@@ -38,3 +38,11 @@ function verificarLogin(){
 		}
 	);
 }
+function toggle_sidebar(){
+    var sidebar = document.getElementById("sidebar");    
+    if(sidebar.style.left != "0px"){
+        sidebar.style.left = "0px";
+    }else{
+        sidebar.style.left = "-85%";
+    }
+}

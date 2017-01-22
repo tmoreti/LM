@@ -1,71 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Teste</title>
-	<script src="assets/js/jquery-1.11.1.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/wow.js"></script>
-    <script src="assets/js/iscroll.js"></script>
-    <script src="assets/js/jquery-mask.js"></script>
-    <script src="assets/js/jquery-ui.min.js"></script>
-    <script src="assets/js/jquery.mobile-1.4.5.min.js"></script>
-    
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
-    <link href="assets/css/simple-sidebar.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/css/efeitoImg.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/jquery.mobile-1.4.5.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/estilos.css">
-
-    <script src="js/config.js"></script>
-    
+	<title>Teste</title>    
 </head>
 <body>
-<div data-role="page" id="test2"> 
+	<div data-role="page" id="test2"> 
+		<script type="text/javascript">
+			
+			menu();
+			header();  
+			destaques();
+		</script>
+		<div id="sidebar"></div>
+		<div class="row hd"></div>
 
-	<div id="sidebar"></div>
+	    <div class="container-fluid" style="margin-top: 65px;">
+	    	
 
-    <div class="container-fluid">
-	    <div class="row">
-	         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-	            <h2>Destaque</h2>
-	        </div>
-	    </div>
-	    <div class="row touch" id="divDestaque"></div>
+		    <div class="row">
+		         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		            <h2>Destaque</h2>
+		        </div>
+		    </div>
+		    <div class="row touch" id="divDestaque"></div>
 
-	    <div class="row">
-	         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-	            <h2>Mais Contratados</h2>
-	        </div>
-	    </div>
-	    <div id="divContratados"></div>
-	   
-	    <div class="row">
-	         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-	            <h2>Categorias</h2>
-	        </div>
-	    </div>
-	    <div class="row">
-	         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-	            <div id="divCategorias"></div>
-	        </div>
-	    </div>
+		    <div class="row">
+		         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		            <h2>Mais Contratados</h2>
+		        </div>
+		    </div>
+		    <div id="divContratados"></div>
+		   
+		    <div class="row">
+		         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		            <h2>Categorias</h2>
+		        </div>
+		    </div>
+		    <div class="row">
+		         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+		            <div id="divCategorias"></div>
+		        </div>
+		    </div>
+		</div>
+
+	        
+	    <div class="corpo touch"></div>
 	</div>
-    
-        
-    <div class="corpo touch"></div>
-                <script type="text/javascript">
-                                $(document).on('pagebeforeshow', '#test2', function(event){  
-                                      if(event.handled !== true) {
-                               				menu();
-											header();     
-                                            event.handled = true;
-                                      }
-                                      return false;                                                             
-                                });
-                </script>
-            </div>
 </body>
 </html>
