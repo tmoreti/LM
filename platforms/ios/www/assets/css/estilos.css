@@ -26,6 +26,8 @@ body{
 }
 .ui-page {
     background-color: #610d11;
+    margin:0px;
+    padding: 0px;
 }
 html{
 	-webkit-overflow-scrolling: touch;
@@ -153,7 +155,7 @@ h3{
 .hd{
 	position: fixed;
 	top: -1;
-	width: 101%;
+	width: 100%;
 	height: 5em;
 	background-color: #000;
 	z-index: 5;
