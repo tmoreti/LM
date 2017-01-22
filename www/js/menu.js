@@ -6,7 +6,7 @@ function menu(){
 		dataType: 'html'
 	}).done(function( html ) {
 	    $('#sidebar').html(html);
-	    //verificarLogin();
+	    verificarLogin();
 	});
 }
 function verificarLogin(){
@@ -28,12 +28,14 @@ function verificarLogin(){
 				$('#mnLogin').hide();
 				$('#nmLogoff').show();
 				$('#minhaBanda').show();
+				$('#ftPerfil').html('<img src="http://graph.facebook.com/' + response.id + '/picture">');
 			}else{
 				// deslogado 
 				$('#minhaBanda').hide();
 				$('#mnConfiguracoes').hide();
 				$('#mnLogin').show();
 				$('#mnLogoff').hide();
+				$('#ftPerfil').html('');
 			}
 		}
 	);
@@ -45,4 +47,12 @@ function toggle_sidebar(){
     }else{
         sidebar.style.left = "-85%";
     }
+}
+function gravarInfoFace(nome,id,email){
+	$.ajax({
+		method: "POST",
+	  	url: site + "loginFace.php",
+	  	cache: false,
+	  	data: {nome:nome, id: id, email: email}
+	});
 }
