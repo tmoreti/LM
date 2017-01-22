@@ -28,14 +28,15 @@ function verificarLogin(){
 				$('#mnLogin').hide();
 				$('#nmLogoff').show();
 				$('#minhaBanda').show();
-				$('#ftPerfil').html('<img src="http://graph.facebook.com/' + response.id + '?fields=picture">');
+				$('#divPerfil').show();
+				$('#ftPerfil').attr('src','http://graph.facebook.com/' + response.id + '/picture');
 			}else{
 				// deslogado 
 				$('#minhaBanda').hide();
 				$('#mnConfiguracoes').hide();
 				$('#mnLogin').show();
 				$('#mnLogoff').hide();
-				$('#ftPerfil').html('');
+				$('#divPerfil').hide();
 			}
 		}
 	);
