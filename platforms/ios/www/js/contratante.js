@@ -24,3 +24,13 @@ function getBandaId(id){
 	}
 }
 
+function estrelas(qtd){
+	var str='';
+	for(i=1;i<=qtd;i++){
+		str+='<span class="glyphicon glyphicon-star"></span> ';
+	}
+	for(j=i;j<=5;j++){
+		str+='<span class="glyphicon glyphicon-star-empty"></span> ';
+	}
+	return str;
+}
