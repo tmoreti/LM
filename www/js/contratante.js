@@ -1,6 +1,7 @@
 function destaques(){
 	var destaque=base.destaques;
 	var qtd=destaque.length;
+	alert(qtd);
 	var rdn= Math.floor((Math.random() * qtd) + 1);
 	rdn=rdn-1;
 	var id=destaque[rdn].id;

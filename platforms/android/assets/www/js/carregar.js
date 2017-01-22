@@ -1,5 +1,5 @@
 function carregarBase(){
-	if(checkConnection()){
+	//if(checkConnection()){
 		$.ajax({
 			method: "POST",
 		  	url: site + "load.php",
@@ -11,15 +11,16 @@ function carregarBase(){
 		}).done(function( html ) {
 		    localStorage.setItem("base",html);
 		    base=JSON.parse(localStorage.getItem("base"));
+		    
 		    $('#indexLoad').html('');
 		    $('.indexBotao').prop('disabled', false);
 		    if(localStorage.getItem("urlInicial")){
 		    	//document.location=localStorage.getItem("urlInicial");
 		    }
 		});
-	}else{
-		$('#indexLoad').html('Sem conexão com a internet');
-	}
+	//}else{
+	//	$('#indexLoad').html('Sem conexão com a internet');
+	//}
 }
 function checkConnection() {
     var networkState = navigator.connection.type;

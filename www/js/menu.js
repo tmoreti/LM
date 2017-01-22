@@ -6,7 +6,7 @@ function menu(){
 		dataType: 'html'
 	}).done(function( html ) {
 	    $('#sidebar').html(html);
-	    verificarLogin();
+	    //verificarLogin();
 	});
 }
 function verificarLogin(){
