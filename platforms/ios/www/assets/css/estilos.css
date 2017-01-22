@@ -154,7 +154,7 @@ h3{
 	z-index: 4;
 	padding: 30px;
 	padding-top: 6em;
-
+	display: none;
 }
 .hd{
 	position: fixed;
@@ -166,6 +166,7 @@ h3{
 	display: block;
 	line-height: 5em;
 	-webkit-overflow-scrolling: auto;
+	display: none;
 }
 .hd h1{
 	line-height: 5px;

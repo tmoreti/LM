@@ -6,6 +6,8 @@ function menu(){
 		dataType: 'html'
 	}).done(function( html ) {
 	    $('#sidebar').html(html);
+	    $('.hd').show();
+	    $('#sidebar').show();
 	    verificarLogin();
 	});
 }
