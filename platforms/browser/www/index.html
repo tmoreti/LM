@@ -8,19 +8,26 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
         
         <title>Live Music</title>
-        <script src="assets/js/jquery-2.2.0.min.js"></script>
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
-        <script src="assets/js/jquery-mask.js"></script>
-        <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
         <script src="assets/js/wow.js"></script>
         <script src="assets/js/iscroll.js"></script>
+        <script src="assets/js/jquery-mask.js"></script>
+        <script src="assets/js/jquery-ui.min.js"></script>
+        <script src="assets/js/jquery.mobile-1.4.5.min.js"></script>
+        
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
         <link href="assets/css/simple-sidebar.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="assets/css/efeitoImg.css">
-        <script src="assets/js/scripts.js"></script>
+        <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/jquery.mobile-1.4.5.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/estilos.css">
-        
+
+        <script src="js/config.js"></script>
+        <script src="js/carregar.js"></script>
+
 
     </head>
     <script type="text/javascript">
@@ -31,6 +38,9 @@
 
         }
 
+        $( document ).ready(function() {
+            onDeviceReady();
+        });
     </script>
     <body>
 
@@ -61,10 +71,12 @@
                 </div>
                 <div class="row footer navbar-fixed-bottom">
                     <div class="col-xs-6 text-center">
-                        <button type="button" class="btn btn-lg btn-block btn-danger indexBotao" disabled="disabled" onclick="selIni('visaoBanda.html')">BANDA</button>
+                        <!-- <button type="button" class="btn btn-lg btn-block btn-danger indexBotao" disabled="disabled" onclick="selIni('visaoBanda.html')">BANDA</button>-->
+                        <a href="banda.html" class="btn btn-lg btn-block btn-danger indexBotao" disabled="disabled" style="background-color: #9F2121; color: " data-transition="slide">BANDA</a>
                     </div>
                     <div class="col-xs-6 text-center">
-                        <button type="button" class="btn btn-lg btn-block btn-danger indexBotao" disabled="disabled" onclick="selIni('visaoEstabelecimentoNovo.html')">ESTABELECIMENTO</button>
+                        <!-- <button type="button" class="btn btn-lg btn-block btn-danger indexBotao" disabled="disabled" onclick="selIni('visaoEstabelecimentoNovo.html')">CONTRATANTE</button> -->
+                        <a href="contratante.html" class="btn btn-lg btn-block btn-danger indexBotao" disabled="disabled" style="background-color: #9F2121; color: " data-transition="slide">CONTRATANTE</a>
                     </div>
                 </div>
                 <div class="col-xs-12 text-center indexFonte">&nbsp;</div>

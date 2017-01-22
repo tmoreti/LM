@@ -24,6 +24,9 @@ body{
 	overflow-x: hidden;
 	-webkit-overflow-scrolling: touch;
 }
+.ui-page {
+    background-color: #610d11;
+}
 html{
 	-webkit-overflow-scrolling: touch;
 }
