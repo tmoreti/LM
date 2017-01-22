@@ -6,5 +6,6 @@ function header(){
 		dataType: 'html'
 	}).done(function( html ) {
 	    $('.hd').html(html);
+	    $('.hd').css('width',$(window).width());
 	});
 }
