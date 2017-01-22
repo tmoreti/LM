@@ -39,3 +39,6 @@ function checkConnection() {
     }
     //alert('Connection type: ' + states[networkState]);
 }
+function teste(){
+	alert('testando')
+}
