@@ -151,9 +151,9 @@ h3{
 
 }
 .hd{
-	/*margin-top: 20px;*/
 	position: fixed;
-	width: 100%;
+	top: -1;
+	width: 101%;
 	height: 5em;
 	background-color: #000;
 	z-index: 5;

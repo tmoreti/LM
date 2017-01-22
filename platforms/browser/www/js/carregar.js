@@ -1,5 +1,5 @@
 function carregarBase(){
-	if(checkConnection()){
+	//if(checkConnection()){
 		$.ajax({
 			method: "POST",
 		  	url: site + "load.php",
@@ -18,9 +18,9 @@ function carregarBase(){
 		    	//document.location=localStorage.getItem("urlInicial");
 		    }
 		});
-	}else{
-		$('#indexLoad').html('Sem conexão com a internet');
-	}
+	//}else{
+	//	$('#indexLoad').html('Sem conexão com a internet');
+	//}
 }
 function checkConnection() {
     var networkState = navigator.connection.type;
