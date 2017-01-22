@@ -31,6 +31,7 @@ function verificarLogin(){
 				$('#nmLogoff').show();
 				$('#minhaBanda').show();
 				$('#divPerfil').show();
+				alert(response.id);
 				$('#ftPerfil').attr('src','http://graph.facebook.com/' + response.id + '/picture');
 			}else{
 				// deslogado 

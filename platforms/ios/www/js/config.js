@@ -10,5 +10,8 @@ function irpara(url){
 		$('.hd').fadeOut('slow');
 		$('#sidebar').fadeOut('slow');
 	}
+	if($('#sidebar').css('left')==0){
+		toggle_sidebar();
+	}
 	$.mobile.changePage(url, { transition: "slide", changeHash: false });
 }
