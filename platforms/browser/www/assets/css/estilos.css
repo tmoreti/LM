@@ -153,7 +153,7 @@ h3{
 .hd{
 	position: fixed;
 	top: -1;
-	width: 101%;
+	width: 100em;
 	height: 5em;
 	background-color: #000;
 	z-index: 5;
