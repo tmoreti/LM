@@ -11,7 +11,7 @@
         <script src="assets/js/jquery-1.11.1.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/wow.js"></script>
-        <script src="assets/js/iscroll.js"></script>
+        
         <script src="assets/js/jquery-mask.js"></script>
         <script src="assets/js/jquery-ui.min.js"></script>
         <script src="assets/js/jquery.mobile-1.4.5.min.js"></script>
@@ -35,19 +35,18 @@
     </head>
     <script type="text/javascript">
         document.addEventListener("deviceready", onDeviceReady, false);
-
         function onDeviceReady() {
             carregarBase();
         }
-
         $( document ).ready(function() {
             onDeviceReady();
         });
         
     </script>
     <body>
+        
         <div id="sidebar"></div>
-        <div class="hd"></div>
+        <div class="hd" data-role="header" data-position="fixed"></div>
 
         <div data-role="page">
             <div class="container-fluid">
@@ -88,7 +87,7 @@
             </div>
         </div>  
 
- 
+    TESTE
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
